@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EB17F93816EACD0E00DEA17A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB17F93716EACD0E00DEA17A /* main.cpp */; };
 		EB17F93A16EACD0E00DEA17A /* Templates.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB17F93916EACD0E00DEA17A /* Templates.1 */; };
+		EB17F94316EACDBD00DEA17A /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB17F94216EACDBD00DEA17A /* Tools.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,10 @@
 		EB17F93416EACD0E00DEA17A /* Templates */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Templates; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB17F93716EACD0E00DEA17A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		EB17F93916EACD0E00DEA17A /* Templates.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Templates.1; sourceTree = "<group>"; };
+		EB17F94016EACD4E00DEA17A /* EArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EArray.h; sourceTree = "<group>"; };
+		EB17F94116EACD8300DEA17A /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
+		EB17F94216EACDBD00DEA17A /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tools.cpp; sourceTree = "<group>"; };
+		EB17F94416EAD58000DEA17A /* Iterate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iterate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,10 @@
 			isa = PBXGroup;
 			children = (
 				EB17F93716EACD0E00DEA17A /* main.cpp */,
+				EB17F94416EAD58000DEA17A /* Iterate.h */,
+				EB17F94116EACD8300DEA17A /* Tools.h */,
+				EB17F94216EACDBD00DEA17A /* Tools.cpp */,
+				EB17F94016EACD4E00DEA17A /* EArray.h */,
 				EB17F93916EACD0E00DEA17A /* Templates.1 */,
 			);
 			path = Templates;
@@ -118,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB17F93816EACD0E00DEA17A /* main.cpp in Sources */,
+				EB17F94316EACDBD00DEA17A /* Tools.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
