@@ -8,7 +8,7 @@
 
 #ifndef Templates_EArray_h
 #define Templates_EArray_h
-
+#include "Iterate.h"
 #include <iostream>
 using namespace std;
 
@@ -31,8 +31,15 @@ public:
     void erase_element(int i);
     void add_element(int i, const T & newval);
     void push(const T & newval);
-    
     void output();
+    
+    bool is_empty() const;
+    
+    typedef Iterate<T> const_iterate;
+    
+    Iterate<T> begin() const;
+    Iterate<T> end() const;
+    
 private:
     T* array;
     int size;
@@ -53,7 +60,6 @@ EArray<T>::EArray(const EArray<T> &source) : size(source.size), array(new T[sour
     for (unsigned int index = 0;index < size; index++) {
         array[index] = source.array[index];
     }
-    
 }
 
 template <class T>
@@ -66,6 +72,11 @@ template <class T>
 T& EArray<T>::operator[](int index)
 {
     return array[index];
+}
+template<class T>
+bool EArray<T>::is_empty() const
+{
+    return size == 0;
 }
 
 template<class T>
@@ -165,17 +176,32 @@ void EArray<T>::add_element(int index, const T & newval)
 template <class T>
 void EArray<T>::push(const T & newval)
 {
+    
     size += 1;
     T* newarray = new T[size];
     
-    for (int i = 0; i < size +1; i++) {
-        newarray[i] = array[i];
+//    if (size > 2) {
+//        for (size_t copyIndex = 0; copyIndex < size-2;++copyIndex )
+//        {
+//            newarray[copyIndex] = array[copyIndex];
+//        }
+//    }
+    
+    
+    int hole = size -1;
+    
+    for (;hole  > 0 && newval < array[hole-1]; --hole)
+    {
+        array[hole] = array[hole - 1];
     }
     
-    delete [] array;
-    newarray[size-1] = newval;
-    array = newarray;
+    array[hole] = newval;
+    
+    //delete [] array;
+    //newarray[size-1] = newval;
+    //array = newarray;
 }
+
 
 template <class T>
 void EArray<T>::output()
@@ -184,4 +210,17 @@ void EArray<T>::output()
         cout << array[i] << endl;
     }
 }
+
+template <class T>
+Iterate<T> EArray<T>::begin() const
+{
+    return const_iterate(array, size);
+}
+
+template <class T>
+Iterate<T> EArray<T>::end() const
+{
+    return const_iterate(array + size, 0);
+}
+
 #endif

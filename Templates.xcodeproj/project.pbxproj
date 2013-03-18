@@ -10,6 +10,7 @@
 		EB17F93816EACD0E00DEA17A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB17F93716EACD0E00DEA17A /* main.cpp */; };
 		EB17F93A16EACD0E00DEA17A /* Templates.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB17F93916EACD0E00DEA17A /* Templates.1 */; };
 		EB17F94316EACDBD00DEA17A /* Tools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB17F94216EACDBD00DEA17A /* Tools.cpp */; };
+		EBF76BB616F54E43008F4833 /* StringOrdering.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF76BB516F54E43008F4833 /* StringOrdering.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,9 @@
 		EB17F94116EACD8300DEA17A /* Tools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
 		EB17F94216EACDBD00DEA17A /* Tools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tools.cpp; sourceTree = "<group>"; };
 		EB17F94416EAD58000DEA17A /* Iterate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Iterate.h; sourceTree = "<group>"; };
+		EBF76BB416F54C7F008F4833 /* StringOrdering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringOrdering.h; sourceTree = "<group>"; };
+		EBF76BB516F54E43008F4833 /* StringOrdering.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StringOrdering.cpp; sourceTree = "<group>"; };
+		EBF76BB716F5560C008F4833 /* Main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Main.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				EB17F93716EACD0E00DEA17A /* main.cpp */,
+				EBF76BB716F5560C008F4833 /* Main.h */,
 				EB17F94416EAD58000DEA17A /* Iterate.h */,
 				EB17F94116EACD8300DEA17A /* Tools.h */,
 				EB17F94216EACDBD00DEA17A /* Tools.cpp */,
 				EB17F94016EACD4E00DEA17A /* EArray.h */,
 				EB17F93916EACD0E00DEA17A /* Templates.1 */,
+				EBF76BB416F54C7F008F4833 /* StringOrdering.h */,
+				EBF76BB516F54E43008F4833 /* StringOrdering.cpp */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -128,6 +135,7 @@
 			files = (
 				EB17F93816EACD0E00DEA17A /* main.cpp in Sources */,
 				EB17F94316EACDBD00DEA17A /* Tools.cpp in Sources */,
+				EBF76BB616F54E43008F4833 /* StringOrdering.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +234,7 @@
 				EB17F93F16EACD0E00DEA17A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
